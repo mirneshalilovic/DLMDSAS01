@@ -1,5 +1,10 @@
-jupyter nbextension install --py hide_code
+jupyter contrib nbextension install --user
+jupyter nbextension enable hide_all_input/main
 
-jupyter nbextension enable --py hide_code
+pip install ipympl
+pip install --upgrade jupyterlab
 
-jupyter serverextension enable --py hide_code
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
+jupyter labextension install jupyter-matplotlib
+
+jupyter nbextension enable --py widgetsnbextension
